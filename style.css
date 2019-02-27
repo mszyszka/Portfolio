@@ -10,7 +10,6 @@ html {
 
 a {
   text-decoration: none;
-  cursor: pointer;
   background-color: none; }
 
 @keyframes fadein {
@@ -67,7 +66,7 @@ a {
   .site-header .header-txt {
     grid-area: header-txt;
     text-align: center;
-    align-self: center; }
+    place-self: center; }
     .site-header .header-txt h1 {
       font-size: 5rem;
       display: inline-block;
@@ -121,5 +120,38 @@ a {
         margin-right: 0.3rem;
         background: #b30027;
         display: inline-block; }
+
+.main-content {
+  display: grid;
+  grid-template-columns: [main-col-start] auto [main-col-end];
+  grid-template-rows: [main-row-start] auto auto auto auto auto [main-row-end];
+  grid-template-areas: 'p0' 'p1' 'p2' 'p3' 'p4'; }
+  .main-content .p0 {
+    grid-area: p0; }
+  .main-content .p1 {
+    grid-area: p1; }
+  .main-content .p2 {
+    grid-area: p2; }
+  .main-content .p3 {
+    grid-area: p3; }
+  .main-content .p4 {
+    grid-area: p4; }
+  .main-content .project {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0; }
+    .main-content .project:first-of-type {
+      padding: 100px 0 50px 0; }
+    .main-content .project a {
+      align-self: center; }
+    .main-content .project .p-img {
+      width: 16rem;
+      margin: 0 0 2rem 0; }
+    .main-content .project figcaption {
+      color: #000;
+      align-self: center;
+      text-align: center;
+      width: 60%;
+      font-size: 1.6rem; }
 
 /*# sourceMappingURL=style.css.map */
