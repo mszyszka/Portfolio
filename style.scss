@@ -66,7 +66,7 @@ a {
             display: flex;
             justify-content: center;
             li {
-                padding: 10px 20px;
+                padding: 15px 20px;
                 font-size: 2.2rem;
                 a {
                     filter: brightness(90%);
@@ -134,7 +134,7 @@ a {
         }
     }
 }
-
+//////////////////////////////////////.main-content /////////////////////////////////
 .main-content {
     display: grid;
     grid-template-columns: [main-col-start] auto [main-col-end];
@@ -181,6 +181,36 @@ a {
             text-align: center;
             width: 60%;
             font-size: 1.6rem;
+        }
+    }
+}
+////////////////////////////////////////.site-footer///////////////////////////////
+.site-footer {
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+    background: #980013;
+    display: grid;
+    grid-template-columns: [site-footer-col-start] auto [site-footer-col-end];
+    grid-template-rows: [site-footer-row-start footer-h1-row-start] 60px [footer-h1-row-end footer-nav-row-start] auto [footer-nav-row-end form-row-start] auto [form-row-end footer-row-end];
+    grid-template-areas:
+    'footer-h1'
+    'footer-nav';
+    // 'form';
+    .footer-h1{
+        grid-area: footer-h1;
+        place-self: center;
+    }
+    .footer-nav{
+
+        grid-area: footer-nav;
+        justify-self: center;
+        i {
+            font-size: 5rem;
+            height: 47px;
+            display: inline-block;
+        }
+        .fa-linkedin {
+            margin-right: 10px;
         }
     }
 }
