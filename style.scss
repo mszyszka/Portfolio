@@ -201,16 +201,29 @@ a {
         place-self: center;
     }
     .footer-nav{
-
         grid-area: footer-nav;
         justify-self: center;
-        i {
-            font-size: 5rem;
+        place-self: center;
+        a {
             height: 47px;
             display: inline-block;
         }
+        i {
+            font-size: 5rem;
+            transition: all ease-in-out 300ms;
+
+        }
         .fa-linkedin {
             margin-right: 10px;
+            &:hover {
+                color: #0077b5;
+            }
+
+        }
+        .fa-facebook-square {
+            &:hover {
+                color: #4267b2;
+            }
         }
     }
 }

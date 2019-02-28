@@ -167,12 +167,19 @@ a {
     place-self: center; }
   .site-footer .footer-nav {
     grid-area: footer-nav;
-    justify-self: center; }
-    .site-footer .footer-nav i {
-      font-size: 5rem;
+    justify-self: center;
+    place-self: center; }
+    .site-footer .footer-nav a {
       height: 47px;
       display: inline-block; }
+    .site-footer .footer-nav i {
+      font-size: 5rem;
+      transition: all ease-in-out 300ms; }
     .site-footer .footer-nav .fa-linkedin {
       margin-right: 10px; }
+      .site-footer .footer-nav .fa-linkedin:hover {
+        color: #0077b5; }
+    .site-footer .footer-nav .fa-facebook-square:hover {
+      color: #4267b2; }
 
 /*# sourceMappingURL=style.css.map */
