@@ -180,6 +180,7 @@ a {
             align-self: center;
             text-align: center;
             width: 60%;
+            max-width: 500px;
             font-size: 1.6rem;
         }
     }
@@ -194,13 +195,14 @@ a {
     grid-template-rows: [site-footer-row-start footer-h1-row-start] 60px [footer-h1-row-end footer-nav-row-start] auto [footer-nav-row-end form-row-start] auto [form-row-end footer-row-end];
     grid-template-areas:
     'footer-h1'
-    'footer-nav';
-    // 'form';
+    'footer-nav'
+    'form';
     .footer-h1{
         grid-area: footer-h1;
         place-self: center;
     }
     .footer-nav{
+        margin: 0 0 50px 0;
         grid-area: footer-nav;
         justify-self: center;
         place-self: center;
@@ -225,5 +227,24 @@ a {
                 color: #4267b2;
             }
         }
+    }
+    .footer-form {
+        grid-area: form;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+        "user-name user-email-address"
+        "user-message user-message";
+        .user-name {
+            grid-area: user-name;
+        }
+        .user-email-address {
+            grid-area: user-email-address;
+        }
+        .user-message {
+            grid-area: user-message;
+        }
+
     }
 }

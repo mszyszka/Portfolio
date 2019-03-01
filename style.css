@@ -152,6 +152,7 @@ a {
       align-self: center;
       text-align: center;
       width: 60%;
+      max-width: 500px;
       font-size: 1.6rem; }
 
 .site-footer {
@@ -161,11 +162,12 @@ a {
   display: grid;
   grid-template-columns: [site-footer-col-start] auto [site-footer-col-end];
   grid-template-rows: [site-footer-row-start footer-h1-row-start] 60px [footer-h1-row-end footer-nav-row-start] auto [footer-nav-row-end form-row-start] auto [form-row-end footer-row-end];
-  grid-template-areas: 'footer-h1' 'footer-nav'; }
+  grid-template-areas: 'footer-h1' 'footer-nav' 'form'; }
   .site-footer .footer-h1 {
     grid-area: footer-h1;
     place-self: center; }
   .site-footer .footer-nav {
+    margin: 0 0 50px 0;
     grid-area: footer-nav;
     justify-self: center;
     place-self: center; }
@@ -181,5 +183,17 @@ a {
         color: #0077b5; }
     .site-footer .footer-nav .fa-facebook-square:hover {
       color: #4267b2; }
+  .site-footer .footer-form {
+    grid-area: form;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "user-name user-email-address" "user-message user-message"; }
+    .site-footer .footer-form .user-name {
+      grid-area: user-name; }
+    .site-footer .footer-form .user-email-address {
+      grid-area: user-email-address; }
+    .site-footer .footer-form .user-message {
+      grid-area: user-message; }
 
 /*# sourceMappingURL=style.css.map */
