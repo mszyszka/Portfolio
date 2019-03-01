@@ -125,7 +125,7 @@ a {
   display: grid;
   grid-template-columns: [main-col-start] auto [main-col-end];
   grid-template-rows: [main-row-start] auto auto auto auto auto [main-row-end];
-  grid-template-areas: 'p0' 'p1' 'p2' 'p3' 'p4'; }
+  grid-template-areas: 'p0' 'p2' 'p1' 'p3' 'p4'; }
   .main-content .p0 {
     grid-area: p0; }
   .main-content .p1 {
@@ -156,21 +156,23 @@ a {
       font-size: 1.6rem; }
 
 .site-footer {
-  padding-bottom: 50px;
-  margin-bottom: 50px;
+  height: 200px;
+  margin-bottom: 100px;
+  margin-top: 50px;
   background: #980013;
   display: grid;
+  align-content: center;
   grid-template-columns: [site-footer-col-start] auto [site-footer-col-end];
-  grid-template-rows: [site-footer-row-start footer-h1-row-start] 60px [footer-h1-row-end footer-nav-row-start] auto [footer-nav-row-end form-row-start] auto [form-row-end footer-row-end];
-  grid-template-areas: 'footer-h1' 'footer-nav' 'form'; }
+  grid-template-rows: [site-footer-row-start footer-h1-row-start] 40px [footer-h1-row-end footer-nav-row-start] 80px [footer-nav-row-end footer-row-end];
+  grid-row-gap: 10px;
+  grid-template-areas: 'footer-h1' 'footer-nav'; }
   .site-footer .footer-h1 {
     grid-area: footer-h1;
-    place-self: center; }
+    place-self: center;
+    font-size: 2rem; }
   .site-footer .footer-nav {
-    margin: 0 0 50px 0;
     grid-area: footer-nav;
-    justify-self: center;
-    place-self: center; }
+    justify-self: center; }
     .site-footer .footer-nav a {
       height: 47px;
       display: inline-block; }
@@ -183,36 +185,18 @@ a {
         color: #0077b5; }
     .site-footer .footer-nav .fa-facebook-square:hover {
       color: #4267b2; }
-  .site-footer .footer-form {
-    width: 70%;
-    max-width: 440px;
-    justify-self: center;
-    grid-area: form;
-    display: grid;
-    grid-row-gap: 10px;
-    grid-column-gap: 10px;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
-    grid-template-areas: "user-name user-email-address" "user-message user-message"; }
-    .site-footer .footer-form .user-name {
-      grid-area: user-name; }
-    .site-footer .footer-form .user-email-address {
-      grid-area: user-email-address; }
-    .site-footer .footer-form .user-message {
-      grid-area: user-message;
-      min-height: 80px; }
-    .site-footer .footer-form .form-field {
-      text-indent: 10px;
-      padding: 5px 0;
-      border: none;
-      outline: none;
-      background: #980013;
-      border: 1px solid #fff;
-      border-radius: 2px;
-      transition: all ease-in-out 300ms; }
-      .site-footer .footer-form .form-field:hover, .site-footer .footer-form .form-field:focus, .site-footer .footer-form .form-field:active {
-        filter: brightness(120%); }
-      .site-footer .footer-form .form-field::placeholder {
-        color: #fff; }
+
+@media (min-width: 900px) {
+  .site-footer {
+    height: 300px; }
+    .site-footer .footer-h1 {
+      font-size: 3rem; }
+    .site-footer .footer-nav i {
+      font-size: 8rem; }
+
+  .main-content .project .p-img {
+    width: 30rem; }
+  .main-content .project figcaption {
+    font-size: 2.2rem; } }
 
 /*# sourceMappingURL=style.css.map */

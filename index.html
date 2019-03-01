@@ -14,8 +14,8 @@
     <header class="site-header">
         <nav class="site-nav">
             <ul class="nav-ul">
-                <li><a href='#'>Github</a></li>
-                <li><a href='#'>LinkedIn</a></li>
+                <li><a href='https://github.com/mszyszka' target="blank">Github</a></li>
+                <li><a href='https://www.linkedin.com/in/micha%C5%82-szyszka-754223135/' target="blank">LinkedIn</a></li>
             </ul>
         </nav>
         <div class="header-txt">
@@ -64,12 +64,15 @@
                 <img src="img/portfolio.png" class="p-img">
             </a>
             <figcaption>
-                    This is a portfolio that you looking at. It's build using CSS Grid and Flexbox. Design of footer and email form is mine.
+                    This is a portfolio that you looking at. It's build using CSS Grid and Flexbox. Of course code is written by me from scratch.
             </figcaption>
         </section>
     </main>
     <footer class="site-footer">
-        <h1 class="footer-h1">Contact Me</h1>
+        <h1 class="footer-h1">
+            <i class="far fa-envelope"></i>
+            Contact Me
+        </h1>
         <nav class="footer-nav">
             <a href="https://www.linkedin.com/in/micha%C5%82-szyszka-754223135/" target="blank" class="linkedin-link">
                 <i class="fab fa-linkedin"></i>
@@ -78,11 +81,13 @@
                 <i class="fab fa-facebook-square"></i>
             </a>
         </nav>
-        <form class="footer-form">
-            <input type="text" placeholder="Your name" class="user-name form-field">
-            <input type="email" placeholder="Your email address" class="user-email-address form-field">
-            <textarea placeholder="Your message" class="user-message form-field"></textarea>
-        </form>
+        <!-- <form class="footer-form" action="index.php" method="POST">
+            <input type="text" placeholder="Your name" class="user-name form-field" name="name">
+            <input type="email" placeholder="Your email address" class="user-email-address form-field" name="email">
+            <input type="text" placeholder="Topic" class="user-topic form-field" name="topic">
+            <textarea placeholder="Your message" class="user-message form-field" name="message"></textarea>
+            <button type="submit" class="send-btn">Send</button>
+        </form> -->
     </footer>
 
     <script src="script.js"></script>

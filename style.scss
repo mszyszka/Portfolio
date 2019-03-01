@@ -141,8 +141,8 @@ a {
     grid-template-rows: [main-row-start] auto auto auto auto auto [main-row-end];
     grid-template-areas:
     'p0'
-    'p1'
     'p2'
+    'p1'
     'p3'
     'p4';
     .p0 {
@@ -187,25 +187,30 @@ a {
 }
 ////////////////////////////////////////.site-footer///////////////////////////////
 .site-footer {
-    padding-bottom: 50px;
-    margin-bottom: 50px;
+    height: 200px;
+    margin-bottom: 100px;
+    margin-top: 50px;
     background: #980013;
     display: grid;
+    align-content: center;
     grid-template-columns: [site-footer-col-start] auto [site-footer-col-end];
-    grid-template-rows: [site-footer-row-start footer-h1-row-start] 60px [footer-h1-row-end footer-nav-row-start] auto [footer-nav-row-end form-row-start] auto [form-row-end footer-row-end];
+    grid-template-rows: [site-footer-row-start footer-h1-row-start] 40px [footer-h1-row-end footer-nav-row-start] 80px [footer-nav-row-end  footer-row-end];
+    grid-row-gap: 10px;
     grid-template-areas:
     'footer-h1'
-    'footer-nav'
-    'form';
+    'footer-nav';
+    .fa-envelope {
+        // grid-area: footer-h1;
+        
+    }
     .footer-h1{
         grid-area: footer-h1;
         place-self: center;
+        font-size: 2rem;
     }
     .footer-nav{
-        margin: 0 0 50px 0;
         grid-area: footer-nav;
         justify-self: center;
-        place-self: center;
         a {
             height: 47px;
             display: inline-block;
@@ -228,46 +233,124 @@ a {
             }
         }
     }
-    .footer-form {
-        width: 70%;
-        max-width: 440px;
-        justify-self: center;
-        grid-area: form;
-        display: grid;
-        grid-row-gap: 10px;
-        grid-column-gap: 10px;
-        grid-template-columns: auto auto;
-        grid-template-rows: auto auto;
-        grid-template-areas:
-        "user-name user-email-address"
-        "user-message user-message";
-        .user-name {
-            grid-area: user-name;
-        }
-        .user-email-address {
-            grid-area: user-email-address;
-        }
-        .user-message {
-            grid-area: user-message;
-            min-height: 80px;
+}
 
+@media(min-width: 900px) {
+    .site-footer {
+        height: 300px;
+        .footer-h1 {
+            font-size: 3rem;
         }
-        .form-field {
-            text-indent: 10px;
-            padding: 5px 0;
-            border: none;
-            outline: none;
-            background: #980013;
-            border: 1px solid #fff;
-            border-radius: 2px;
-            transition: all ease-in-out 300ms;
-            &:hover,&:focus,&:active {
-                filter: brightness(120%);
-            }
-            &::placeholder {
-                color: #fff;
+        .footer-nav {
+            i {
+                font-size: 8rem;
             }
         }
-
+    }
+    .main-content {
+        .project {
+            .p-img {
+                width: 30rem;
+            }
+            figcaption {
+                font-size: 2.2rem;
+            }
+        }
     }
 }
+
+//     .footer-form {
+//         width: 70%;
+//         max-width: 440px;
+//         justify-self: center;
+//         grid-area: form;
+//         display: grid;
+//         grid-row-gap: 10px;
+//         grid-column-gap: 10px;
+//         grid-template-columns: auto auto;
+//         grid-template-rows: auto auto auto auto;
+//         grid-template-areas:
+//         "user-name user-email-address"
+//         "user-topic user-topic"
+//         "user-message user-message"
+//         "send-btn .";
+//         .user-name {
+//             grid-area: user-name;
+//         }
+//         .user-email-address {
+//             grid-area: user-email-address;
+//         }
+//         .user-topic {
+//             grid-area: user-topic;
+//         }
+//         .user-message {
+//             grid-area: user-message;
+//             min-height: 80px;
+//         }
+//         .send-btn {
+//             grid-area: send-btn;
+//             width: 70%;
+//             color: #000;
+//             outline: none;
+//             border: none;
+//             padding: 5px 15px;
+//             margin: 10px 0 0 0;
+//             background: #fff;
+//             cursor: pointer;
+//             transition: all ease-in-out 150ms;
+//             &:hover,&:active {
+//                 -webkit-box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,0.74);
+//                 -moz-box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,0.74);
+//                 box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,0.74);
+//             }
+//         }
+//         .form-field {
+//             text-indent: 10px;
+//             padding: 5px 0;
+//             border: none;
+//             outline: none;
+//             background: #980013;
+//             border: 1px solid #fff;
+//             transition: all ease-in-out 300ms;
+//             &:hover,&:focus,&:active {
+//                 filter: brightness(120%);
+//             }
+//             &::placeholder {
+//                 color: #fff;
+//             }
+//         }
+//     }
+// }
+
+// @media(min-width: 900px) {
+//     .site-footer {
+//         padding-bottom: 100px;
+//         padding-top: 50px;
+//         grid-template-columns: [site-footer-col-start] 1fr 1fr[site-footer-col-end];
+//         grid-template-rows: [site-footer-row-start footer-h1-row-start] 80px [footer-h1-row-end footer-nav-row-start form-row-start] auto [footer-nav-row-end form-row-end footer-row-end];
+//         grid-column-gap: 40px;
+//         grid-row-gap: 20px;
+//         grid-template-areas:
+//         'footer-h1 footer-h1'
+//         'footer-nav form';
+//         .footer-h1 {
+//             font-size: 3rem;
+//         }
+//         .footer-nav {
+//             margin: 0;
+//             justify-self: right;
+//             align-self: auto;
+//         }
+//         .footer-form {
+//             justify-self: left;
+//         }
+//         .footer-nav {
+//             a {
+//                 height: 75px;
+//             }
+//             i {
+//                 font-size: 8rem;
+//             }
+//         }
+//     }
+// }
