@@ -42,6 +42,7 @@ a {
   to {
     opacity: 1; } }
 .site-header {
+  margin-top: 58px;
   background: #b30027;
   display: grid;
   grid-template-columns: [header-col-start] 100% [header-col-end];
@@ -49,6 +50,10 @@ a {
   grid-template-areas: 'site-nav' 'header-txt'; }
   .site-header .site-nav {
     grid-area: site-nav;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1001;
     background: #980013; }
     .site-header .site-nav .nav-ul {
       list-style-type: none;
